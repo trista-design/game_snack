@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #181818;
+  font-family: "Teko", sans-serif;
+  height: 100vh;
+}
+body #gameCover {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 1;
+}
+body #gameCover div.title {
+  color: white;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  opacity: 0;
+}
+body #gameCover div.title .square {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  margin: 0 2rem;
+  margin-bottom: 0.5rem;
+}
+body #gameCover div.subtitle {
+  color: aquamarine;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -1rem;
+  opacity: 0;
+}
+body #gameCover div.subtitle p {
+  padding: 0.5rem;
+  font-weight: 800;
+}
+body #gameCover div.background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+body #gameCover div.background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #playground {
+  position: absolute;
+  width: 1000px;
+  height: 700px;
+}
+body #playground div.pixel {
+  color: white;
+  font-size: 2rem;
+  float: left;
+}
+body #playground div.pixel p:first-child {
+  position: absolute;
+  top: 9%;
+  left: 2%;
+  transform-origin: right top;
+  transform: rotate(-90deg);
+}
+body #playground div.pixel p:nth-child(2) {
+  position: absolute;
+  top: 7%;
+  left: 11.5%;
+  transform: translate(-50%, -50%);
+}
+body #playground div.pixel p:nth-child(3) {
+  position: absolute;
+  bottom: 6.5%;
+  right: 7%;
+  transform: translate(-50%, -50%);
+  transform-origin: right top;
+  transform: rotate(90deg);
+}
+body #playground div.pixel p:nth-child(4) {
+  position: absolute;
+  bottom: 5%;
+  left: 74.5%;
+  transform: translate(-50%, -50%);
+  transform-origin: right top;
+  transform: rotate(180deg);
+}
+body #playground div.score1 {
+  display: flex;
+  color: white;
+  align-items: center;
+  position: absolute;
+  top: 2%;
+  left: 76%;
+}
+body #playground div.score1 #myScore {
+  font-size: 2rem;
+}
+body #playground div.score1 #myScore2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: yellow;
+}
+body #playground div.score2 {
+  display: flex;
+  color: white;
+  align-items: center;
+  position: absolute;
+  bottom: 10%;
+  left: 11%;
+}
+body #playground div.score2 #highestScore {
+  font-size: 2rem;
+}
+body #playground div.score2 #highestScore2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: aquamarine;
+}
+body #playground div.container {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body #playground div.container .start-btn {
+  all: unset;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0.3rem 1.5rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+}
+body #playground div.container .start-btn::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  inset: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
+}
+body #playground div.container .start-btn:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+body #playground div.container .start-btn:hover::after {
+  transform: scaleX(1);
+}
+body #playground div.container .start-btn:first-child::after {
+  transform-origin: right;
+}
+
+#myCanvas {
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 20rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>貪食蛇遊戲</title>
+    <meta name="autor" content="Trista" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+    </style>
+    <link rel="stylesheet" href="./style-game/style.css" />
+  </head>
+  <body>
+    <!--遊戲區域-->
+    <section id="playground">
+      <a id="myCover" href="./index.html"></a>
+      <!-- 畫圖區 -->
+      <canvas
+        id="myCanvas"
+        width="780"
+        height="510"
+        style="background-color: #010256"
+      ></canvas>
+      <!-- 外框裝飾 -->
+      <div class="pixel">
+        <p>SNAA</p>
+        <p>AAAAKE</p>
+        <p>SNAA</p>
+        <p>AAAAKE</p>
+      </div>
+      <!-- 分數 -->
+      <div class="score1">
+        <p id="myScore"></p>
+        <p id="myScore2"></p>
+      </div>
+      <!-- 最高分數 -->
+      <div class="score2">
+        <p id="highestScore">BEST：</p>
+        <p id="highestScore2">5000</p>
+      </div>
+      <!-- 新開始遊戲 -->
+      <div class="container">
+        <button type="button" class="start-btn" onclick="location.reload()">
+          New Game
+        </button>
+      </div>
+    </section>
+    <!-- cdnjs-gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+      integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- JS -->
+    <script src="./app.js"></script>
+  </body>
+</html>
